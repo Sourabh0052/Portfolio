@@ -6,422 +6,277 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sourabh's Portfolio</title>
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            background-color: rgb(160, 160, 221);
-        }
-
-        .cba {
-            color: blue;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f3ec78, #af4261);
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
         }
 
         nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
-            height: 80px;
-            background-color: rgb(226, 43, 186);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
         }
 
         nav ul {
+            list-style: none;
             display: flex;
-            justify-content: center;
         }
 
         nav ul li {
-            /* list-style: none; */
-            margin: 0 23px;
+            margin: 0 15px;
         }
 
         nav ul li a {
             text-decoration: none;
             color: white;
+            transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            color: rgb(54, 9, 167);
-            font-size: 1.04rem;
+            color: #f3ec78;
         }
 
-        .left {
-            font-size: 2rem;
-        }
-
-        .firstSection {
-            /* ye size krdiya  */
-            /* font-size: 1.5rem; */
-            display: flex;
-            justify-content: space-around;
-            margin: 23px 0;
-        }
-
-        .firstSection div {
-            /* background-color: red; */
-            width: 25%;
-        }
-
-        /* .firstSection {
-            width: 30%;
-        } */
-
-        .leftSection {
-            /* background-color: rgb(255, 0, 0); */
-            font-size: 3rem;
-            margin: 20px;
-        }
-
-        .leftSection div {
-            width: 400px;
-        }
-
-        .rightSection {
-            width: 80%;
-            /* background-color: red; */
-        }
-
-        .abc {
-            color: red;
-        }
-
-        main hr {
-            border: 1;
-            background-color: black;
-            height: 1.2px;
-            margin: 60px 84px;
-        }
-
-        .secondSection {
-            max-width: 80vw;
-            margin: auto;
+        header,
+        .home {
             height: 100vh;
-        }
-
-        .secondSection h1 {
-            font-size: 1.6rem;
-        }
-
-        .text-gray {
-            color: red;
-        }
-
-        .secondSection .hh {
-            border: 1;
-            background-color: black;
-            height: 1.2px;
-            /* margin: 20px 25px; */
-            margin: 0;
-            padding: 0;
-        }
-
-        .secondSection .hhh {
-            border: 1;
-            background-color: black;
-            height: 1.2px;
-            /* margin: 20px 25px; */
-            margin: 0;
-            padding: 0;
-        }
-
-        .secondSection .hhhh {
-            border: 1;
-            background-color: black;
-            height: 1.2px;
-            /* margin: 20px 25px; */
-            margin: 0;
-            padding: 0;
-        }
-
-        .secondSection .hhhhh {
-            border: 1;
-            background-color: black;
-            height: 1.2px;
-            margin: 0;
-            padding: 0;
-        }
-
-        .secondSection .hhhhhh {
-            border: 1;
-            background-color: black;
-            height: 1.2px;
-            margin: 0;
-            padding: 0;
-        }
-
-        .secondSection .hhhhhhh {
-            border: 1;
-            background-color: black;
-            height: 1.2px;
-            margin: 0;
-            padding: 0;
-        }
-
-
-        .sp {
-            color: blue;
-            font-size: large;
-        }
-
-        .Educat .edu1 {
-            font-style: italic;
-            color: blue;
-        }
-
-        .Educat .edu2 {
-            font-style: italic;
-            color: blue;
-        }
-
-        .secondSection .box {
-            width: 80vw;
-            height: 2px;
-            margin: 0;
-            padding: 0;
             display: flex;
-
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background: linear-gradient(135deg, #2b5876, #4e4376);
         }
 
-        .secondSection .box2 {
-            width: 80vw;
-            height: 2px;
-            margin: 0;
-            padding: 0;
+        header h1,
+        .home h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        header p,
+        .home p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        header .btn,
+        .home .btn {
+            padding: 10px 20px;
+            background: #f3ec78;
+            color: #333;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        header .btn:hover,
+        .home .btn:hover {
+            transform: scale(1.1);
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .about,
+        .skills,
+        .education {
+            text-align: center;
+        }
+
+        .about h2,
+        .skills h2,
+        .education h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about p,
+        .education p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .skills-list {
             display: flex;
-
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
         }
 
-        .secondSection .vertical {
-            height: 20px;
-            width: 1.5px;
-            background-color: rgb(12, 12, 12);
-            margin: 0 250px;
+        .skills-list .skill {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            color: #333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .proj1 {
-            position: relative;
-            top: 20px;
-            width: 250px;
+        .education-list {
+            list-style: none;
+            margin-top: 20px;
         }
 
-        .p1 {
-            font-size: large;
-            font-style: italic;
-            color: red;
+        .education-list li {
+            margin-bottom: 15px;
         }
 
-        .proj2 {
-            position: relative;
-            top: 20px;
-            width: 350px;
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
         }
 
-        .p2 {
-            font-size: large;
-            font-style: italic;
-            color: red;
+        .projects .project-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            transition: transform 0.3s;
         }
 
-        .proj {
-            padding: 0;
-            margin: 0;
+        .projects .project-card:hover {
+            transform: scale(1.05);
         }
 
-        .secondSection .v2 {
-            height: 20px;
-            width: 1.5px;
-            background-color: black;
-            margin: 0 110px;
+        .projects .project-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
         }
 
-        .v21 {
-            position: relative;
-            top: 20px;
-            color: blue;
-            font-size: x-large;
+        .projects .project-card p {
+            font-size: 0.9rem;
+            color: #666;
         }
 
-        .v22 {
-            position: relative;
-            top: 20px;
-            color: blue;
-            font-size: x-large;
+        .projects .project-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #2b5876;
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        .v23 {
-            position: relative;
-            top: 20px;
-            color: blue;
-            font-size: x-large;
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+            margin-top: 40px;
         }
 
-        .v24 {
-            position: relative;
-            top: 20px;
-            color: blue;
-            font-size: x-large;
+        footer a {
+            color: #f3ec78;
+            text-decoration: none;
         }
 
-        .v25 {
-            position: relative;
-            top: 20px;
-            color: blue;
-            font-size: x-large;
-        }
-
-        .l {
-            font-size: small;
-            color: black;
-        }
-
-        .text-gray {
-            font-size: xx-large;
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="left">Sourabh's Portfolio</div>
-            <div class="right">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Service</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contact me</a></li>
-                </ul>
-            </div>
+    <nav>
+        <div class="logo">Sourabh's Portfolio</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        </nav>
-    </header>
-    <main>
-        <section class="firstSection">
-            <div class="leftSection">
-                Hii, My name is <span class="abc">"Sourabh".....</span>
-                <div>And I'm an MCA Student & doing internship at <span class="cba">NectTec solutions</span> </div>
-            </div>
-            <div class="rightSection"><img class="img1" src="imge.svg" alt=""></div>
+    <section id="home" class="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi, I'm Sourabh - MCA Graduate & Doing Internship at NextTec Solutions as a Frontend Intern</p>
+        <button class="btn">Explore More</button>
+    </section>
 
-        </section>
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I'm passionate about web development, solving DSA problems, and building interactive user interfaces.
+            Currently, I'm enhancing my skills and working on exciting projects.</p>
+    </section>
 
-        <hr class="h">
+    <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <div class="skills-list">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React.js</div>
+            <div class="skill">Java</div>
+            <div class="skill">DSA</div>
+            <div class="skill">SQL</div>
+        </div>
+    </section>
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Car Parking System</h3>
+            <p>A GUI-based application to manage parking slots effectively using Java.</p>
+            <a href="https://github.com/Sourabh0052/CarParkingSystem">View Project</a>
+        </div>
+        <div class="project-card">
+            <h3>QR Code Generator</h3>
+            <p>A tool to generate and download QR codes using HTML, CSS, and JavaScript.</p>
+            <a href="https://github.com/Sourabh0052/QR_Code_generator_using_html_css_js">View Project</a>
+        </div>
+    </section>
 
-        <section class="secondSection">
-            <span class="text-gray">About me</span> <br><br>
-            <div class="pro">
-                <h1>Profile:</h1>
-                <hr class="hhh">
-                <p>Seeking a challenging and fast-paced
-                    role where I can leverage my skills and
-                    experience to make a significant
-                    impact. Excited to contribute to an
-                    organization that values continuous
-                    learning and growth. Passionate
-                    about solving DSA problems.</p>
-            </div>
-            <br>
-            <div class="exp">
-                <h1>Experience:</h1>
-                <hr class="hh">
-                <p>
-                    <span class="sp">Frontend Intern NextTec (Remote📍| January 2025 - present):</span>
-                    <br>
-                    Collaborating on building responsive web interfaces using HTML, CSS,
-                    and JavaScript. Assisting in debugging, optimizing code, and
-                    implementing dynamic features for enhanced user experience.
-                    Contributing to UI/UX design improvements and team projects.
-                </p>
-            </div>
-            <br>
-            <div class="Educat">
-                <h1>Education:</h1>
-                <hr class="hhhh">
-                <span class="edu1">MCA (Master of computer Application)</span>
-                <p>J.C. Bose University of Science and Technology YMCA Faridabad
-                    (2023 - 2025)</p>
-                <span class="edu2">BCA (Bachelor of Computer Application)</span>
-                <p>Maharishi Dayanand University: (Pt J L Nehru govt college Faridabad(2019 - 2022))</p>
-            </div>
-            <br>
-            <div>
-                <div class="proj">
-                    <h1>Projects:</h1>
-                    <hr class="hhhhh">
-                    <div class="box">
-                        <div class="vertical">
-                            <div class="proj1">
-                                <p class="p1">(1)Car Parking System using Java</p>
-                                <p>A GUI-based application that allows users to park and remove cars.</p>
-                                <a href="https://github.com/Sourabh0052/CarParkingSystem">Project link</a>
-                            </div>
-                        </div>
-                        <div class="vertical">
-                            <div class="proj2">
-                                <p class="p2">(2)QR Code Generator using Html,CSS & JS </p>
-                                <p>Generate and Download QR codes from any URL or text input.</p>
-                                <a href="https://github.com/Sourabh0052/QR_Code_generator_using_html_css_js">Project
-                                    link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <ul class="education-list">
+            <li><strong>MCA</strong>, JC Bose University of Science and Technology</li>
+            <li><strong>BCA</strong>, Pt. J.L. Nehru Govt College, Faridabad</li>
+            <li><strong>Senior Secondary</strong>, Shanti Public School, Palwal</li>
+        </ul>
+    </section>
 
-            </div>
-            <br> <br> <br> <br> <br>
-            <div class="skill">
-                <h1>Skills:</h1>
-                <hr class="hhhhhh">
-                <div class="box2">
-                    <div class="v2">
-                        <div class="v21"><span>*C++</span></div>
-                    </div>
-                    <div class="v2">
-                        <div class="v22"><span>*DSA</span></div>
-                    </div>
-                    <div class="v2">
-                        <div class="v23"><span>*Java</span></div>
-                    </div>
-                    <div class="v2">
-                        <div class="v24"><span>*SQL</span></div>
-                    </div>
-                    <div class="v2">
-                        <div class="v25">
-                            <p id="front">*Frontend</p>
-                            <ul class="l">
-                                <li> Html</li>
-                                <li> CSS</li>
-                                <li> JavaScript</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br> <br> <br> <br> <br>
-            <h1>Contact:</h1>
-            <hr class="hhhhhhh">
-            <!-- <p class="phne">Phone: </p> -->
-            <span>Phone: </span>
-            <!-- <span class="phn">+91-9518209472</span> <br> -->
-            <a href="+91 9518209472">+91 9518209472</a> <br>
-            <span>Email: </span>
-            <!-- <span class="mail">Sourabhattri63@gmail.com</span> -->
-            <a href="Sourabhattri63@gmail.com">Sourabhattri63@gmail.com</a> <br>
-            <span>LINKEDIN:</span>
-            <a href="https://www.linkedin.com/in/sourabh052/">https://www.linkedin.com/in/sourabh052/</a> <br>
-            <span>GITHUB:</span>
-            <a href="https://github.com/Sourabh0052">https://github.com/Sourabh0052</a>
-
-
-
-
-        </section>
-
-    </main>
+    <footer id="contact">
+        <p>Contact me: <a href="mailto:Sourabhattri63@gmail.com">Sourabhattri63@gmail.com</a></p>
+        <p>Phone: <a href="tel:+919518209472">+91-9518209472</a></p>
+        <p>Connect with me: <a href="https://www.linkedin.com/in/sourabh052/">LinkedIn</a> | <a
+                href="https://github.com/Sourabh0052">GitHub</a></p>
+    </footer>
 </body>
 
 </html>
