@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sourabh's Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(160, 160, 221);
+        }
+
+        .cba {
+            color: blue;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(226, 43, 186);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            /* list-style: none; */
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(54, 9, 167);
+            font-size: 1.04rem;
+        }
+
+        .left {
+            font-size: 2rem;
+        }
+
+        .firstSection {
+            /* ye size krdiya  */
+            /* font-size: 1.5rem; */
+            display: flex;
+            justify-content: space-around;
+            margin: 23px 0;
+        }
+
+        .firstSection div {
+            /* background-color: red; */
+            width: 25%;
+        }
+
+        /* .firstSection {
+            width: 30%;
+        } */
+
+        .leftSection {
+            /* background-color: rgb(255, 0, 0); */
+            font-size: 3rem;
+            margin: 20px;
+        }
+
+        .leftSection div {
+            width: 400px;
+        }
+
+        .rightSection {
+            width: 80%;
+            /* background-color: red; */
+        }
+
+        .abc {
+            color: red;
+        }
+
+        main hr {
+            border: 1;
+            background-color: black;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 100vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.6rem;
+        }
+
+        .text-gray {
+            color: red;
+        }
+
+        .secondSection .hh {
+            border: 1;
+            background-color: black;
+            height: 1.2px;
+            /* margin: 20px 25px; */
+            margin: 0;
+            padding: 0;
+        }
+
+        .secondSection .hhh {
+            border: 1;
+            background-color: black;
+            height: 1.2px;
+            /* margin: 20px 25px; */
+            margin: 0;
+            padding: 0;
+        }
+
+        .secondSection .hhhh {
+            border: 1;
+            background-color: black;
+            height: 1.2px;
+            /* margin: 20px 25px; */
+            margin: 0;
+            padding: 0;
+        }
+
+        .secondSection .hhhhh {
+            border: 1;
+            background-color: black;
+            height: 1.2px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .secondSection .hhhhhh {
+            border: 1;
+            background-color: black;
+            height: 1.2px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .secondSection .hhhhhhh {
+            border: 1;
+            background-color: black;
+            height: 1.2px;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .sp {
+            color: blue;
+            font-size: large;
+        }
+
+        .Educat .edu1 {
+            font-style: italic;
+            color: blue;
+        }
+
+        .Educat .edu2 {
+            font-style: italic;
+            color: blue;
+        }
+
+        .secondSection .box {
+            width: 80vw;
+            height: 2px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+        }
+
+        .secondSection .box2 {
+            width: 80vw;
+            height: 2px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+        }
+
+        .secondSection .vertical {
+            height: 20px;
+            width: 1.5px;
+            background-color: rgb(12, 12, 12);
+            margin: 0 250px;
+        }
+
+        .proj1 {
+            position: relative;
+            top: 20px;
+            width: 250px;
+        }
+
+        .p1 {
+            font-size: large;
+            font-style: italic;
+            color: red;
+        }
+
+        .proj2 {
+            position: relative;
+            top: 20px;
+            width: 350px;
+        }
+
+        .p2 {
+            font-size: large;
+            font-style: italic;
+            color: red;
+        }
+
+        .proj {
+            padding: 0;
+            margin: 0;
+        }
+
+        .secondSection .v2 {
+            height: 20px;
+            width: 1.5px;
+            background-color: black;
+            margin: 0 110px;
+        }
+
+        .v21 {
+            position: relative;
+            top: 20px;
+            color: blue;
+            font-size: x-large;
+        }
+
+        .v22 {
+            position: relative;
+            top: 20px;
+            color: blue;
+            font-size: x-large;
+        }
+
+        .v23 {
+            position: relative;
+            top: 20px;
+            color: blue;
+            font-size: x-large;
+        }
+
+        .v24 {
+            position: relative;
+            top: 20px;
+            color: blue;
+            font-size: x-large;
+        }
+
+        .v25 {
+            position: relative;
+            top: 20px;
+            color: blue;
+            font-size: x-large;
+        }
+
+        .l {
+            font-size: small;
+            color: black;
+        }
+
+        .text-gray {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Sourabh's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Service</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact me</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hii, My name is <span class="abc">"Sourabh".....</span>
+                <div>And I'm an MCA Student & doing internship at <span class="cba">NectTec solutions</span> </div>
+            </div>
+            <div class="rightSection"><img class="img1" src="imge.svg" alt=""></div>
+
+        </section>
+
+        <hr class="h">
+
+        <section class="secondSection">
+            <span class="text-gray">About me</span> <br><br>
+            <div class="pro">
+                <h1>Profile:</h1>
+                <hr class="hhh">
+                <p>Seeking a challenging and fast-paced
+                    role where I can leverage my skills and
+                    experience to make a significant
+                    impact. Excited to contribute to an
+                    organization that values continuous
+                    learning and growth. Passionate
+                    about solving DSA problems.</p>
+            </div>
+            <br>
+            <div class="exp">
+                <h1>Experience:</h1>
+                <hr class="hh">
+                <p>
+                    <span class="sp">Frontend Intern NextTec (Remote📍| January 2025 - present):</span>
+                    <br>
+                    Collaborating on building responsive web interfaces using HTML, CSS,
+                    and JavaScript. Assisting in debugging, optimizing code, and
+                    implementing dynamic features for enhanced user experience.
+                    Contributing to UI/UX design improvements and team projects.
+                </p>
+            </div>
+            <br>
+            <div class="Educat">
+                <h1>Education:</h1>
+                <hr class="hhhh">
+                <span class="edu1">MCA (Master of computer Application)</span>
+                <p>J.C. Bose University of Science and Technology YMCA Faridabad
+                    (2023 - 2025)</p>
+                <span class="edu2">BCA (Bachelor of Computer Application)</span>
+                <p>Maharishi Dayanand University: (Pt J L Nehru govt college Faridabad(2019 - 2022))</p>
+            </div>
+            <br>
+            <div>
+                <div class="proj">
+                    <h1>Projects:</h1>
+                    <hr class="hhhhh">
+                    <div class="box">
+                        <div class="vertical">
+                            <div class="proj1">
+                                <p class="p1">(1)Car Parking System using Java</p>
+                                <p>A GUI-based application that allows users to park and remove cars.</p>
+                                <a href="https://github.com/Sourabh0052/CarParkingSystem">Project link</a>
+                            </div>
+                        </div>
+                        <div class="vertical">
+                            <div class="proj2">
+                                <p class="p2">(2)QR Code Generator using Html,CSS & JS </p>
+                                <p>Generate and Download QR codes from any URL or text input.</p>
+                                <a href="https://github.com/Sourabh0052/QR_Code_generator_using_html_css_js">Project
+                                    link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br> <br> <br> <br> <br>
+            <div class="skill">
+                <h1>Skills:</h1>
+                <hr class="hhhhhh">
+                <div class="box2">
+                    <div class="v2">
+                        <div class="v21"><span>*C++</span></div>
+                    </div>
+                    <div class="v2">
+                        <div class="v22"><span>*DSA</span></div>
+                    </div>
+                    <div class="v2">
+                        <div class="v23"><span>*Java</span></div>
+                    </div>
+                    <div class="v2">
+                        <div class="v24"><span>*SQL</span></div>
+                    </div>
+                    <div class="v2">
+                        <div class="v25">
+                            <p id="front">*Frontend</p>
+                            <ul class="l">
+                                <li> Html</li>
+                                <li> CSS</li>
+                                <li> JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br> <br> <br> <br> <br>
+            <h1>Contact:</h1>
+            <hr class="hhhhhhh">
+            <!-- <p class="phne">Phone: </p> -->
+            <span>Phone: </span>
+            <!-- <span class="phn">+91-9518209472</span> <br> -->
+            <a href="+91 9518209472">+91 9518209472</a> <br>
+            <span>Email: </span>
+            <!-- <span class="mail">Sourabhattri63@gmail.com</span> -->
+            <a href="Sourabhattri63@gmail.com">Sourabhattri63@gmail.com</a> <br>
+            <span>LINKEDIN:</span>
+            <a href="https://www.linkedin.com/in/sourabh052/">https://www.linkedin.com/in/sourabh052/</a> <br>
+            <span>GITHUB:</span>
+            <a href="https://github.com/Sourabh0052">https://github.com/Sourabh0052</a>
+
+
+
+
+        </section>
+
+    </main>
+</body>
+
+</html>
